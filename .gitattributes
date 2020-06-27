@@ -1,0 +1,165 @@
+################################################################################
+## gitattributes cheat-sheet
+
+### WHAT IS THIS FILE?
+# This file when recognized by a git client, will help enforce consistency
+# across multiple environments/systems in regards to line endings(CRLF & LF).
+# Documentation - `.gitattributes`: https://git-scm.com/docs/gitattributes
+
+# It provides fine-grained control in comparison to the `core.autocrlf` and
+# `core.eol` git settings that may vary per system, while the `.gitattributes`
+# file has a higher priority than `.gitconfig` and travels with the repository.
+# Documentation - `.gitconfig`: https://git-scm.com/docs/git-config
+
+
+### WHY SHOULD I CARE?
+# The desired result is to ensure the repo contains normalized LF line endings,
+# notably avoiding unhelpful noise in diffs or issues incurred from mixed line
+# endings. Storing as LF ensures no surprises for line endings during checkout.
+# Additionally for checkout to the local working directory, line endings can be
+# forced to CRLF or LF per file where appropriate, which ensures the files have
+# compatible line endings where software expects a specific kind.
+
+
+### ATTRIBUTES
+# `text` normalizes the file(s) line endings to LF upon add/commit. (CRLF -> LF)
+# `text=auto` sets `text` if Git decides the matched file is not binary data.
+
+# `eol` enforces a line ending for a file when writing to the working directory.
+# `core.autocrlf` when set to `true` or `input` overrides the `core.eol` value.
+# `core.eol` is used for any files not explicitly set with an `eol` attr value.
+# `core.eol` uses the native line endings for your platform by default.
+
+# `binary` is an alias for `-text -diff`. The file won't be normalized(-text).
+# `-diff` indicates not to show a diff. Useful when diffs are not likely to be
+# meaningful such as generated content (SVG, Source Maps, Lockfiles).
+
+# `export-ignore` excludes matched files and directories during `git archive`,
+# which services like Github use to create releases of a project with.
+
+## gitattributes cheat-sheet
+################################################################################
+
+################################################################################
+## gitattributes cheat-sheet
+
+# Normalize all non-binary files line endings to LF upon `git add`/`git commit.`
+* text=auto
+
+.gitattributes     text export-ignore
+.gitignore         text export-ignore
+
+## Text
+.editorconfig      text
+.eslintrc          text
+.stylelintrc       text
+.babelrc           text
+.env               text
+*.json             text
+*.yaml             text
+*.md               text
+.dockerignore      text
+Dockerfile         text
+
+## OS/EOL Specific
+*.bat              text eol=crlf
+*.sh               text eol=lf
+
+## Text, but Diffs are less meaningful, so ignore them.
+*.lock             text -diff
+*.svg              text -diff
+
+## GRAPHICS
+*.pdf              binary
+*.png              binary
+*.gif              binary
+*.jpg              binary
+*.jpeg             binary
+*.webp             binary
+*.ico              binary
+
+## VIDEO
+*.webm             binary
+
+## gitattributes cheat-sheet
+################################################################################
+
+
+################################################################################
+# Adapted from "Archives.gitignore"
+# https://github.com/github/gitignore/blob/9322d165f36ceb4d2afa85b06606f1daaba272d6/Global/Archives.gitignore
+#
+
+# It's better to unpack these files and commit the raw source because
+# git has its own built in compression methods.
+*.7z binary
+*.jar binary
+*.rar binary
+*.zip binary
+*.gz binary
+*.tgz binary
+*.bzip binary
+*.bz2 binary
+*.xz binary
+*.lzma binary
+*.cab binary
+
+# Packing-only formats
+*.iso binary
+*.tar binary
+
+# Package management formats
+*.dmg binary
+*.xpi binary
+*.gem binary
+*.egg binary
+*.deb binary
+*.rpm binary
+*.msi binary
+*.msm binary
+*.msp binary
+
+#
+################################################################################
+
+
+################################################################################
+# Adapted from "C++.gitignore"
+# https://github.com/github/gitignore/blob/2c52d023ddb520962d1aa81ab030ee5172261eb2/C%2B%2B.gitignore
+#
+
+# Prerequisites
+*.d binary
+
+# Compiled Object files
+*.slo binary
+*.lo binary
+*.o binary
+*.obj binary
+
+# Precompiled Headers
+*.gch binary
+*.pch binary
+
+# Compiled Dynamic libraries
+*.so binary
+*.dylib binary
+*.dll binary
+
+# Fortran module files
+*.mod binary
+*.smod binary
+
+# Compiled Static libraries
+*.lai binary
+*.la binary
+*.a binary
+*.lib binary
+
+# Executables
+*.exe binary
+*.out binary
+*.app binary
+
+#
+################################################################################
