@@ -177,3 +177,127 @@ Dockerfile         text
 
 #
 ################################################################################
+
+################################################################################
+# git-annex
+#
+
+* annex.backend=MD5E
+
+# WARNING: Checking mimetype check has bugs, see note below.
+# * annex.largefiles=(mimetype=binary/*)
+# NOTE: (mimeencoding=binary) was only added in very recent git-annex versions,
+# so might be best not to rely on it too heavily.
+# Available in version "7.20190322+git133-g59922f1f4-1~ndall+1"
+# references:
+# - https://github.com/datalad/datalad/issues/3361
+* annex.largefiles=(mimeencoding=binary)
+
+#
+################################################################################
+
+################################################################################
+# Archives.gitignore
+# https://github.com/github/gitignore/blob/9322d165f36ceb4d2afa85b06606f1daaba272d6/Global/Archives.gitignore
+#
+
+# It's better to unpack these files and commit the raw source because
+# git has its own built in compression methods.
+*.7z annex.largefiles=(anything)
+*.jar annex.largefiles=(anything)
+*.rar annex.largefiles=(anything)
+*.zip annex.largefiles=(anything)
+*.gz annex.largefiles=(anything)
+*.tgz annex.largefiles=(anything)
+*.bzip annex.largefiles=(anything)
+*.bz2 annex.largefiles=(anything)
+*.xz annex.largefiles=(anything)
+*.lzma annex.largefiles=(anything)
+*.cab annex.largefiles=(anything)
+
+# Packing-only formats
+*.iso annex.largefiles=(anything)
+*.tar annex.largefiles=(anything)
+
+# Package management formats
+*.dmg annex.largefiles=(anything)
+*.xpi annex.largefiles=(anything)
+*.gem annex.largefiles=(anything)
+*.egg annex.largefiles=(anything)
+*.deb annex.largefiles=(anything)
+*.rpm annex.largefiles=(anything)
+*.msi annex.largefiles=(anything)
+*.msm annex.largefiles=(anything)
+*.msp annex.largefiles=(anything)
+
+#
+################################################################################
+
+################################################################################
+# C++.gitignore
+# https://github.com/github/gitignore/blob/2c52d023ddb520962d1aa81ab030ee5172261eb2/C%2B%2B.gitignore
+#
+
+# Prerequisites
+*.d annex.largefiles=(anything)
+
+# Compiled Object files
+*.slo annex.largefiles=(anything)
+*.lo annex.largefiles=(anything)
+*.o annex.largefiles=(anything)
+*.obj annex.largefiles=(anything)
+
+# Precompiled Headers
+*.gch annex.largefiles=(anything)
+*.pch annex.largefiles=(anything)
+
+# Compiled Dynamic libraries
+*.so annex.largefiles=(anything)
+*.dylib annex.largefiles=(anything)
+*.dll annex.largefiles=(anything)
+
+# Fortran module files
+*.mod annex.largefiles=(anything)
+*.smod annex.largefiles=(anything)
+
+# Compiled Static libraries
+*.lai annex.largefiles=(anything)
+*.la annex.largefiles=(anything)
+*.a annex.largefiles=(anything)
+*.lib annex.largefiles=(anything)
+
+# Executables
+*.exe annex.largefiles=(anything)
+*.out annex.largefiles=(anything)
+*.app annex.largefiles=(anything)
+
+#
+################################################################################
+
+################################################################################
+# yocto specific
+
+# After a file has been downloaded and has had its checksum checked, a ".done"
+# stamp is placed in DL_DIR. BitBake uses this stamp during subsequent builds
+# to avoid downloading or comparing a checksum for the file again.
+
+*sstate*.tgz annex.largefiles=(anything)
+
+*.done annex.largefiles=(nothing)
+*sstate*.tgz.siginfo annex.largefiles=(nothing)
+
+#
+################################################################################
+
+################################################################################
+# Custom
+#
+
+*.ipk annex.largefiles=(anything)
+
+*.done annex.largefiles=(nothing)
+*.html annex.largefiles=(nothing)
+*.txt annex.largefiles=(nothing)
+
+#
+################################################################################
