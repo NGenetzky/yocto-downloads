@@ -163,3 +163,17 @@ Dockerfile         text
 
 #
 ################################################################################
+
+################################################################################
+# yocto specific
+
+# After a file has been downloaded and has had its checksum checked, a ".done"
+# stamp is placed in DL_DIR. BitBake uses this stamp during subsequent builds
+# to avoid downloading or comparing a checksum for the file again.
+
+*.done text
+*sstate*.tgz binary
+*sstate*.tgz.siginfo text
+
+#
+################################################################################
