@@ -1,0 +1,11 @@
+# Don't keep things with bad checksum.
+# These should be tracked down.
+*bad-checksum*
+
+# Don't keep bare git repos, keep output from
+# BB_GENERATE_MIRROR_TARBALLS
+**/git2/*
+
+# Just incase a sstate-cache file gets in.
+*sstate*.tgz
+*sstate*.tgz.siginfo
