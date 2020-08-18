@@ -286,6 +286,8 @@ Dockerfile         text
 *.done annex.largefiles=(nothing)
 *sstate*.tgz.siginfo annex.largefiles=(nothing)
 
+*.hash annex.largefiles=(nothing)
+
 #
 ################################################################################
 
