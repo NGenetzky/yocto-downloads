@@ -5,6 +5,7 @@
 # Don't keep bare git repos, keep output from
 # BB_GENERATE_MIRROR_TARBALLS
 **/git2/*
+**/git/*
 
 # Just incase a sstate-cache file gets in.
 *sstate*.tgz
