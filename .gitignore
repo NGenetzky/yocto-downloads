@@ -10,3 +10,6 @@
 # Just incase a sstate-cache file gets in.
 *sstate*.tgz
 *sstate*.tgz.siginfo
+
+# Ignore output of BB_GENERATE_MIRROR_TARBALLS for now
+git2_*.tar.gz*
