@@ -1,12 +1,15 @@
+04d66f6f-b1fa-4652-8894-9db3c6a2bd25 git@gogs:~/gogs-repositories/yocto.novo.genetzky.us/yocto-downloads.git timestamp=1600140186.914217815s
 1b495463-803e-4625-ad68-8edaae045742 ngenetzky@ngenetzky-novo:/workspace/public/yocto/yocto-3.1.1/build/downloads timestamp=1593613982.176439387s
 271fe0bf-ac6c-47a2-8edf-06310f4db651 ngenetzky@ngenetzky-skull:/data/yocto/2.4/downloads timestamp=1524445315.336119213s
 4aa6bc96-05d2-4fb8-8310-9ec3015eeb09 ngenetzky@ngenetzky-skull:/media/ngenetzky/wdpass-ext4/ngenetzky/annex/yocto-downloads timestamp=1555831974.631700025s
 5ced5152-9136-4fad-bedf-06bf5661d449 ngenetzky@ngenetzky-ultra:/data/yocto/downloads timestamp=1526341834.680867s
+6d553524-1f3e-443c-a9d7-8b35b2da8ef4 ngenetzky@ngenetzky-novo:/mnt/work0/public/yocto-warrior-iac/docker/phusion-baseimage/build/downloads timestamp=1598941482.335069586s
 72d958d2-4d62-4e96-b2e7-0f3c191c97af ngenetzky@ngenetzky-novo:/data/public/ngenetzky/annex/yocto/yocto-3.1.1/build/downloads timestamp=1597107467.169849658s
 ae9527b6-2677-4871-a82f-c41d05a52ada ilab01@devday157.yocto.io:/scratch/downloads timestamp=1593706373.746976513s
 bf0d3f74-4dcc-4507-8773-8b970cb61c60 ngenetzky@ngenetzky-skull:/media/ngenetzky/lnx-passport/ngenetzky/annex/yocto-downloads timestamp=1524448910.511285093s
 cfad1c0c-1c2e-4168-855e-c16a93ef551b ngenetzky@ngenetzky-novo:/workspace/yocto/yocto-imx-demo/projects/imx8-gtec-demo/downloads timestamp=1593220870.298095177s
 d69bb33c-9261-44d3-8aec-b0739f330021 ngenetzky@ngenetzky-skull:/data/yocto/downloads timestamp=1524430892.456921473s
+f0739edc-d366-4f10-b6e8-90399e916f99 ngenetzky@ngenetzky-novo:/mnt/work1/public/isar/isar-cip-core-buster/build/downloads timestamp=1600143357.220507743s
 f41cd132-2d8f-47a1-aa97-6f73633f3c16 ngenetzky@ngenetzky-novo:/workspace/public/yocto/workspace/yocto/2.6/poky-glibc-x86_64-core-image-sato-aarch64-toolchain-ext-2.6.4/downloads timestamp=1593218579.050071409s
 f4490b6d-9127-4832-9b32-31f783519084 ngenetzky@ngenetzky-skull:/media/ngenetzky/mewtwo-ext4/ngenetzky/annex/yocto-downloads timestamp=1557719597.880509722s
 f6d6f6bc-c59b-4b35-a8f4-8296bc4f00e4 ngenetzky@ngenetzky-novo:/workspace/dataset/yocto-downloads timestamp=1585594441.751204525s
