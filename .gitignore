@@ -13,3 +13,6 @@
 
 # Ignore output of BB_GENERATE_MIRROR_TARBALLS for now
 git2_*.tar.gz*
+
+# Ignore these files because they can lead to conflicts
+*done
