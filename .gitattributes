@@ -301,6 +301,9 @@ Dockerfile         text
 *.html annex.largefiles=(nothing)
 *.txt annex.largefiles=(nothing)
 
+*.csv text
+*.csv annex.largefiles=(nothing)
+
 #
 ################################################################################
 
